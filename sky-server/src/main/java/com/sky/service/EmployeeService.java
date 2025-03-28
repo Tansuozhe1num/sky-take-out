@@ -22,5 +22,15 @@ public interface EmployeeService {
 
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
+    // 禁用员工
     void StartorStop(Integer status, Long id);
+
+    // 根据注释查询员工
+    Employee getById(Long id);
+
+    /***
+     * 编辑员工信息
+     * @param employeeDTO
+     */
+    void update(EmployeeDTO employeeDTO);
 }
