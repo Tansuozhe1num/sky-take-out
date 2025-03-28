@@ -106,4 +106,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return new PageResult(total, reconds);
     }
+
+    /***
+     * 启用禁用员工账号
+     * @param status
+     * @param id
+     */
+    public void StartorStop(Integer status, Long id) {
+        // 最终是要执行: update employee set status = ? where id = ?
+        Employee employee = Employee.builder().status(status).id(id).build(); // Employee类加了builder注解，可以使用这种方法直接构建
+
+        employeeMapper.update(employee);
+    }
 }
