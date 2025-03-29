@@ -9,4 +9,11 @@
             (#{df.dishId}, #{df.name}, #{df.value})
         </foreach>
     </insert>
+    
+    <delete id="deleteByDishIdx">
+        delete from dish where id in 
+                         <foreach collection="idx" item="id" open="(" close=")" separator=",">
+                             #{id}
+                         </foreach>
+    </delete>
 </mapper>
