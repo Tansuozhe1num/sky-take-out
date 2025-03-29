@@ -9,5 +9,5 @@ sky:
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
     access-key-id: mimi
-  #  access-key-secret: mimi
+    access-key-secret: mimi
     bucket-name: takeouttakeout
