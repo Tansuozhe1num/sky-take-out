@@ -73,7 +73,7 @@ public class AutoFillAspect {
         } else if (operationType == OperationType.UPDATE) {
             // 2个字段赋值
             try {
-                Method setUpdateTime = entity.getClass().getDeclaredMethod("setUpdateTime", Long.class);
+                Method setUpdateTime = entity.getClass().getDeclaredMethod("setUpdateTime", LocalDateTime.class);
                 Method setUpdateUser = entity.getClass().getDeclaredMethod("setUpdateUser", Long.class);
 
                 // 通过反射为对象属性赋值
