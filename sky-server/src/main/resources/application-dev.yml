@@ -7,7 +7,8 @@ sky:
     username: root
     password: 547055741
   alioss:
-    endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: x
-    access-key-secret: d
-    bucket-name: takeouttakeout
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
