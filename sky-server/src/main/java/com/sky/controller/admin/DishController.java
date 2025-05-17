@@ -55,7 +55,7 @@ public class DishController {
         dishService.deleteBatch(ids);
 
         // 将所有菜品缓存数据删除
-        clearCache("dish_");
+        clearCache("dish_*");
 
         return Result.success();
     }
@@ -81,7 +81,7 @@ public class DishController {
         dishService.updateWithFlavour(dishDTO);
 
         // 将所有菜品缓存数据删除
-        clearCache("dish_");
+        clearCache("dish_*");
 
         return Result.success();
     }
@@ -94,7 +94,7 @@ public class DishController {
         dishService.StartorStop(status, id);
 
         // 将所有菜品缓存数据删除
-        clearCache("dish_");
+        clearCache("dish_*");
 
         return Result.success();
     }
