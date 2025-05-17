@@ -55,7 +55,7 @@ public class DishServiceImpl implements DishService {
 
         // 向口味插入n条数据
         List<DishFlavor> flavours = dishDTO.getFlavors();
-        if (flavours != null && !flavours.isEmpty()) {
+        if (flavours != null && flavours.size() > 0) {
             flavours.forEach(dishFlavor -> {
                 dishFlavor.setDishId(dishId);
             });
